@@ -1,0 +1,5 @@
+<!-- Purpose: Android字符串资源：定义应用名称等文本资源。 -->
+
+<resources>
+    <string name="app_name">RAG 导购</string>
+</resources>

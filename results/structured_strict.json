@@ -1,0 +1,1028 @@
+{
+  "strategy": "schema_constrained",
+  "metrics": {
+    "strategy": "schema_constrained",
+    "total": 40,
+    "parse_success_rate": 1.0,
+    "field_complete_rate": 1.0,
+    "type_valid_rate": 1.0,
+    "non_empty_rate": 0.1
+  },
+  "records": [
+    {
+      "product_id": "p_digital_001",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "科技",
+          "商务",
+          "旗舰"
+        ],
+        "target_users": [
+          "科技爱好者",
+          "内容创作者",
+          "商务人群"
+        ],
+        "key_features": [
+          "A19 Pro芯片强劲性能",
+          "6.3英寸超视网膜XDR显示屏",
+          "256GB大存储",
+          "哑光玻璃工艺"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_002",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "轻薄",
+          "旗舰",
+          "摄影"
+        ],
+        "target_users": [
+          "摄影爱好者",
+          "手机办公族",
+          "普通用户"
+        ],
+        "key_features": [
+          "超感光影像",
+          "曲面屏轻薄",
+          "徕卡调校RYYB传感器",
+          "1.5K臻彩曲面屏"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_003",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "商务",
+          "高端",
+          "科技"
+        ],
+        "target_users": [
+          "内容创作者",
+          "重度手游玩家",
+          "商务人群"
+        ],
+        "key_features": [
+          "6.9英寸超视网膜XDR显示屏",
+          "A19 Pro仿生芯片",
+          "航空级钛合金边框",
+          "256GB大存储"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_004",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约",
+          "商务"
+        ],
+        "target_users": [
+          "职场人",
+          "大学生"
+        ],
+        "key_features": [
+          "鸿蒙跨端协同",
+          "2K触控屏",
+          "轻至1.49kg",
+          "65W快充长续航"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_005",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "商务",
+          "简约"
+        ],
+        "target_users": [
+          "职场打工人",
+          "内容创作者",
+          "高校学生"
+        ],
+        "key_features": [
+          "高刷大屏",
+          "多任务分屏",
+          "低延迟手写笔",
+          "全金属机身"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_006",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": true,
+      "parsed": {
+        "color": "深空黑",
+        "style_tags": [
+          "专业",
+          "高性能",
+          "商务"
+        ],
+        "target_users": [
+          "专业创作者",
+          "程序开发者",
+          "高端商务人士"
+        ],
+        "key_features": [
+          "M5系列芯片",
+          "Liquid Retina XDR显示屏",
+          "长达18小时续航",
+          "全铝一体成型机身"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_007",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "科技",
+          "简约",
+          "商务"
+        ],
+        "target_users": [
+          "数码爱好者",
+          "通勤族",
+          "办公党"
+        ],
+        "key_features": [
+          "主动降噪",
+          "高解析音质",
+          "长续航",
+          "快充"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_008",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "商务",
+          "科技"
+        ],
+        "target_users": [
+          "影像发烧友",
+          "手游重度玩家",
+          "职场精英"
+        ],
+        "key_features": [
+          "2K高刷屏",
+          "潜望长焦",
+          "澎湃影像芯片",
+          "5G网络"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_009",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "科技",
+          "电竞",
+          "影音"
+        ],
+        "target_users": [
+          "通勤党",
+          "手游玩家",
+          "内容创作者"
+        ],
+        "key_features": [
+          "7英寸2K超清大屏",
+          "120Hz自适应高刷",
+          "6800mAh超大电池",
+          "骁龙8 Gen4处理器"
+        ]
+      }
+    },
+    {
+      "product_id": "p_digital_010",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "商务",
+          "科技",
+          "高端"
+        ],
+        "target_users": [
+          "商务人士",
+          "影音发烧友",
+          "创意内容创作者"
+        ],
+        "key_features": [
+          "展开后超大内屏支持4应用同屏分栏",
+          "轻量化钛合金铰链寿命长",
+          "旗舰级骁龙最新移动平台",
+          "影音视野比直屏多近60%"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_001",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约",
+          "宽松",
+          "休闲"
+        ],
+        "target_users": [
+          "男性",
+          "学生",
+          "上班族"
+        ],
+        "key_features": [
+          "AIRism黑科技凉感",
+          "吸湿速干",
+          "亲肤棉质",
+          "宽松H版型"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_002",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": true,
+      "parsed": {
+        "color": "灰/黑/蓝",
+        "style_tags": [
+          "运动",
+          "简约",
+          "休闲"
+        ],
+        "target_users": [
+          "男性",
+          "运动爱好者",
+          "日常通勤者"
+        ],
+        "key_features": [
+          "DRY-EX超快干",
+          "吸湿速干",
+          "透气不闷热",
+          "百搭耐穿"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_003",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "简约",
+          "休闲"
+        ],
+        "target_users": [
+          "运动爱好者",
+          "学生党",
+          "职场人士"
+        ],
+        "key_features": [
+          "Dri-FIT速干科技面料",
+          "快速排汗不黏身",
+          "修身版型活动自如",
+          "高性价比日常训练"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_004",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "休闲"
+        ],
+        "target_users": [
+          "学生",
+          "通勤打工人",
+          "运动爱好者"
+        ],
+        "key_features": [
+          "纯棉混纺针织面料",
+          "亲肤透气",
+          "标志性三条纹设计",
+          "收口裤脚"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_005",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "休闲",
+          "简约"
+        ],
+        "target_users": [
+          "男性",
+          "学生",
+          "上班族"
+        ],
+        "key_features": [
+          "经典大Logo印花",
+          "320g重磅精梳棉面料",
+          "亲肤舒适耐穿",
+          "加固连帽走线"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_006",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "休闲",
+          "简约",
+          "运动"
+        ],
+        "target_users": [
+          "男性",
+          "日常通勤者",
+          "运动爱好者"
+        ],
+        "key_features": [
+          "重磅针织毛圈面料",
+          "不易起皱",
+          "松紧腰头内置抽绳",
+          "束脚剪裁"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_007",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "简约",
+          "百搭"
+        ],
+        "target_users": [
+          "入门跑者",
+          "健身爱好者",
+          "上班族"
+        ],
+        "key_features": [
+          "前后掌分离Zoom Air气垫",
+          "全掌ReactX泡棉中底",
+          "透气工程网布",
+          "长距离公路跑支撑性与日常百搭"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_008",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "休闲",
+          "简约"
+        ],
+        "target_users": [
+          "入门跑者",
+          "有运动习惯的上班族",
+          "男生"
+        ],
+        "key_features": [
+          "Boost中底回弹提升12%",
+          "轻量针织鞋面贴合脚面",
+          "稳定支撑鞋笼设计",
+          "软而不塌的缓震脚感"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_009",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "休闲",
+          "简约"
+        ],
+        "target_users": [
+          "跑步爱好者",
+          "日常通勤者",
+          "运动爱好者"
+        ],
+        "key_features": [
+          "缓震舒适",
+          "轻量回弹",
+          "透气鞋面",
+          "稳定支撑"
+        ]
+      }
+    },
+    {
+      "product_id": "p_clothes_010",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "竞速",
+          "运动"
+        ],
+        "target_users": [
+          "进阶跑者",
+          "马拉松跑者"
+        ],
+        "key_features": [
+          "全掌碳板",
+          "轻量",
+          "透气",
+          "耐磨"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_001",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "经典",
+          "科技",
+          "修护"
+        ],
+        "target_users": [
+          "抗初老人群",
+          "熬夜族",
+          "25+女性"
+        ],
+        "key_features": [
+          "二裂酵母发酵产物溶胞物修护肌底",
+          "透明质酸保湿",
+          "猴面包树籽提取物淡纹紧致",
+          "夜间肌底修护"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_002",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [],
+        "target_users": [
+          "25岁以上初抗老人群",
+          "肤质不稳定人群",
+          "毛孔粗大者"
+        ],
+        "key_features": [
+          "98%高纯度二裂酵母发酵产物溶胞物",
+          "修护受损屏障",
+          "细腻毛孔",
+          "提亮肤色"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_003",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约"
+        ],
+        "target_users": [
+          "25岁以上女性",
+          "初老迹象人群"
+        ],
+        "key_features": [
+          "含90%以上PITERA™核心成分",
+          "温和调理角质",
+          "收缩毛孔",
+          "保湿透亮"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_004",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": true,
+      "parsed": {
+        "color": "红色",
+        "style_tags": [
+          "修护",
+          "维稳",
+          "强韧"
+        ],
+        "target_users": [
+          "换季敏感肌肤",
+          "熬夜后暗沉不稳定",
+          "长期受外界刺激人群"
+        ],
+        "key_features": [
+          "ULTIMUNE肌活复合物",
+          "激活肌肤自身防御机制",
+          "强韧肌底",
+          "舒缓保湿"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_005",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "温和",
+          "清爽"
+        ],
+        "target_users": [
+          "有日晒斑人群",
+          "熬夜暗沉人群",
+          "痘印色素沉淀人群"
+        ],
+        "key_features": [
+          "温和淡斑",
+          "均匀提亮肤色",
+          "抑制黑色素生成",
+          "修护肌肤屏障"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_006",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "清爽",
+          "自然",
+          "日常"
+        ],
+        "target_users": [
+          "油皮",
+          "混油皮",
+          "追求清爽肤感人群"
+        ],
+        "key_features": [
+          "水感轻薄质地",
+          "麦色滤科技高倍防晒",
+          "添加玻尿酸与维生素E修护肌肤",
+          "自然提亮肤色"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_007",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约"
+        ],
+        "target_users": [
+          "敏感肌人群",
+          "屏障受损者",
+          "换季泛红者"
+        ],
+        "key_features": [
+          "舒缓泛红干痒",
+          "修护皮肤屏障",
+          "深层锁水保湿",
+          "可厚敷急救"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_008",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": true,
+      "parsed": {
+        "color": "红色",
+        "style_tags": [
+          "简约"
+        ],
+        "target_users": [
+          "25+人群",
+          "初老肌肤人群"
+        ],
+        "key_features": [
+          "高浓度烟酰胺",
+          "五胜肽淡纹",
+          "透明质酸保湿",
+          "紧致提拉"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_009",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约",
+          "现代"
+        ],
+        "target_users": [
+          "25+人群",
+          "熬夜党",
+          "暗沉肌肤"
+        ],
+        "key_features": [
+          "抗氧抗糖",
+          "提亮肤色",
+          "淡化细纹",
+          "清爽易吸收"
+        ]
+      }
+    },
+    {
+      "product_id": "p_beauty_010",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "清爽",
+          "运动"
+        ],
+        "target_users": [
+          "户外爱好者",
+          "通勤族",
+          "易出汗人群"
+        ],
+        "key_features": [
+          "Aqua Booster EX遇水增强技术",
+          "SPF50+ PA++++高倍防护",
+          "清爽不油腻",
+          "添加保湿因子"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_001",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "便携",
+          "精品"
+        ],
+        "target_users": [
+          "上班族",
+          "学生党",
+          "咖啡爱好者"
+        ],
+        "key_features": [
+          "6种烘焙度，风味多样",
+          "100%阿拉比卡精品豆",
+          "低温冻干锁住风味",
+          "无添加糖和植脂末"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_002",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "便捷",
+          "经典",
+          "实惠"
+        ],
+        "target_users": [
+          "上班族",
+          "学生",
+          "家庭用户"
+        ],
+        "key_features": [
+          "三合一配比",
+          "丝滑奶香",
+          "3秒速溶",
+          "高性价比"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_003",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约",
+          "天然",
+          "经典"
+        ],
+        "target_users": [
+          "控糖人群",
+          "健身党",
+          "上班族",
+          "怕胖人群"
+        ],
+        "key_features": [
+          "无糖零热量",
+          "真乌龙茶萃取",
+          "炭火焙香醇厚",
+          "解腻解辣"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_004",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "健康",
+          "清爽",
+          "运动"
+        ],
+        "target_users": [
+          "运动人群",
+          "减脂人群",
+          "学生上班族"
+        ],
+        "key_features": [
+          "0糖0脂0卡",
+          "赤藓糖醇代糖",
+          "白桃味鲜爽",
+          "气泡解腻"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_005",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "活力",
+          "经典"
+        ],
+        "target_users": [
+          "熬夜人群",
+          "运动人群",
+          "上班族"
+        ],
+        "key_features": [
+          "含牛磺酸、咖啡因和B族维生素",
+          "500ml大容量",
+          "快速补充能量、驱散困意",
+          "清甜焦香口感"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_006",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "运动",
+          "活力"
+        ],
+        "target_users": [
+          "货车司机",
+          "上班族",
+          "运动人群"
+        ],
+        "key_features": [
+          "含牛磺酸、赖氨酸和咖啡因",
+          "补充能量",
+          "整箱装便利"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_007",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "健康",
+          "天然"
+        ],
+        "target_users": [
+          "学龄孩子",
+          "上班族",
+          "长辈"
+        ],
+        "key_features": [
+          "有机奶源",
+          "高乳蛋白",
+          "口感顺滑",
+          "常温盒装"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_008",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "简约",
+          "健康",
+          "经典"
+        ],
+        "target_users": [
+          "学生",
+          "上班族",
+          "老人"
+        ],
+        "key_features": [
+          "无添加香精色素明胶",
+          "生牛乳发酵",
+          "口感绵密丝滑",
+          "常温保存便携"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_009",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "健康",
+          "简约",
+          "便携"
+        ],
+        "target_users": [
+          "职场人",
+          "学生",
+          "宝妈"
+        ],
+        "key_features": [
+          "独立小包装",
+          "科学配比",
+          "无添加白砂糖",
+          "每日精准营养"
+        ]
+      }
+    },
+    {
+      "product_id": "p_food_010",
+      "parse_ok": true,
+      "complete": true,
+      "type_valid": true,
+      "non_empty": false,
+      "parsed": {
+        "color": "",
+        "style_tags": [
+          "休闲",
+          "早餐",
+          "零食"
+        ],
+        "target_users": [
+          "学生党",
+          "上班族",
+          "长辈"
+        ],
+        "key_features": [
+          "皮薄馅多",
+          "咸香不腻",
+          "精选猪腿肉松",
+          "无人工香精"
+        ]
+      }
+    }
+  ]
+}

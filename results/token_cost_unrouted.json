@@ -1,0 +1,204 @@
+{
+  "unrouted": {
+    "per_question": [
+      {
+        "question": "给我推荐一款智能手机",
+        "llm_calls": 1,
+        "prompt_tokens": 983,
+        "completion_tokens": 267,
+        "total_tokens": 1250,
+        "answer_chars": 259
+      },
+      {
+        "question": "Apple 苹果的智能手机值得买吗？多少钱",
+        "llm_calls": 1,
+        "prompt_tokens": 1056,
+        "completion_tokens": 174,
+        "total_tokens": 1230,
+        "answer_chars": 238
+      },
+      {
+        "question": "预算8990元以内，想买智能手机，有什么推荐",
+        "llm_calls": 1,
+        "prompt_tokens": 963,
+        "completion_tokens": 197,
+        "total_tokens": 1160,
+        "answer_chars": 259
+      },
+      {
+        "question": "对比一下智能手机和平板电脑，哪个更值得买",
+        "llm_calls": 1,
+        "prompt_tokens": 1201,
+        "completion_tokens": 418,
+        "total_tokens": 1619,
+        "answer_chars": 363
+      },
+      {
+        "question": "智能手机现在有什么优惠活动吗",
+        "llm_calls": 1,
+        "prompt_tokens": 1053,
+        "completion_tokens": 288,
+        "total_tokens": 1341,
+        "answer_chars": 351
+      },
+      {
+        "question": "销量最好的智能手机是哪一款",
+        "llm_calls": 1,
+        "prompt_tokens": 965,
+        "completion_tokens": 244,
+        "total_tokens": 1209,
+        "answer_chars": 325
+      },
+      {
+        "question": "给我推荐一款跑步鞋",
+        "llm_calls": 1,
+        "prompt_tokens": 1063,
+        "completion_tokens": 425,
+        "total_tokens": 1488,
+        "answer_chars": 320
+      },
+      {
+        "question": "HOKA的跑步鞋值得买吗？多少钱",
+        "llm_calls": 1,
+        "prompt_tokens": 1135,
+        "completion_tokens": 350,
+        "total_tokens": 1485,
+        "answer_chars": 408
+      },
+      {
+        "question": "预算1310元以内，想买跑步鞋，有什么推荐",
+        "llm_calls": 1,
+        "prompt_tokens": 1071,
+        "completion_tokens": 601,
+        "total_tokens": 1672,
+        "answer_chars": 401
+      },
+      {
+        "question": "对比一下跑步鞋和短袖T恤，哪个更值得买",
+        "llm_calls": 1,
+        "prompt_tokens": 1061,
+        "completion_tokens": 468,
+        "total_tokens": 1529,
+        "answer_chars": 463
+      },
+      {
+        "question": "跑步鞋现在有什么优惠活动吗",
+        "llm_calls": 1,
+        "prompt_tokens": 1054,
+        "completion_tokens": 340,
+        "total_tokens": 1394,
+        "answer_chars": 370
+      },
+      {
+        "question": "销量最好的跑步鞋是哪一款",
+        "llm_calls": 1,
+        "prompt_tokens": 1039,
+        "completion_tokens": 372,
+        "total_tokens": 1411,
+        "answer_chars": 322
+      },
+      {
+        "question": "给我推荐一款精华",
+        "llm_calls": 1,
+        "prompt_tokens": 927,
+        "completion_tokens": 457,
+        "total_tokens": 1384,
+        "answer_chars": 306
+      },
+      {
+        "question": "The Ordinary的精华值得买吗？多少钱",
+        "llm_calls": 1,
+        "prompt_tokens": 1002,
+        "completion_tokens": 242,
+        "total_tokens": 1244,
+        "answer_chars": 259
+      },
+      {
+        "question": "预算620元以内，想买精华，有什么推荐",
+        "llm_calls": 1,
+        "prompt_tokens": 811,
+        "completion_tokens": 426,
+        "total_tokens": 1237,
+        "answer_chars": 344
+      },
+      {
+        "question": "对比一下精华和防晒，哪个更值得买",
+        "llm_calls": 1,
+        "prompt_tokens": 948,
+        "completion_tokens": 1433,
+        "total_tokens": 2381,
+        "answer_chars": 504
+      },
+      {
+        "question": "精华现在有什么优惠活动吗",
+        "llm_calls": 1,
+        "prompt_tokens": 850,
+        "completion_tokens": 361,
+        "total_tokens": 1211,
+        "answer_chars": 372
+      },
+      {
+        "question": "销量最好的精华是哪一款",
+        "llm_calls": 1,
+        "prompt_tokens": 1007,
+        "completion_tokens": 362,
+        "total_tokens": 1369,
+        "answer_chars": 219
+      },
+      {
+        "question": "给我推荐一款方便食品",
+        "llm_calls": 1,
+        "prompt_tokens": 946,
+        "completion_tokens": 336,
+        "total_tokens": 1282,
+        "answer_chars": 416
+      },
+      {
+        "question": "康师傅的方便食品值得买吗？多少钱",
+        "llm_calls": 1,
+        "prompt_tokens": 973,
+        "completion_tokens": 283,
+        "total_tokens": 1256,
+        "answer_chars": 275
+      },
+      {
+        "question": "预算30元以内，想买方便食品，有什么推荐",
+        "llm_calls": 1,
+        "prompt_tokens": 953,
+        "completion_tokens": 577,
+        "total_tokens": 1530,
+        "answer_chars": 283
+      },
+      {
+        "question": "对比一下方便食品和咖啡，哪个更值得买",
+        "llm_calls": 1,
+        "prompt_tokens": 952,
+        "completion_tokens": 442,
+        "total_tokens": 1394,
+        "answer_chars": 320
+      },
+      {
+        "question": "方便食品现在有什么优惠活动吗",
+        "llm_calls": 1,
+        "prompt_tokens": 948,
+        "completion_tokens": 241,
+        "total_tokens": 1189,
+        "answer_chars": 284
+      },
+      {
+        "question": "销量最好的方便食品是哪一款",
+        "llm_calls": 1,
+        "prompt_tokens": 942,
+        "completion_tokens": 287,
+        "total_tokens": 1229,
+        "answer_chars": 224
+      }
+    ],
+    "totals": {
+      "calls": 24,
+      "prompt_tokens": 23903,
+      "completion_tokens": 9591,
+      "total_tokens": 33494
+    }
+  }
+}

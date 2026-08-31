@@ -1,0 +1,30 @@
+# 隐私与体积排除
+.env
+.env.*
+*.key
+*.pem
+
+# 数据与产物（不上传）
+data/
+annotated/
+runs/
+*.pt
+*.onnx
+*.pkl
+*.chroma/
+chroma_db/
+
+# 依赖与缓存
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.conda/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 运行时数据与二进制
+server/runtime/
+*.jar

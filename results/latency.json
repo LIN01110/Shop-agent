@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "http_base": "http://localhost:8000",
+    "note": "HTTP 测试结果取决于服务当前配置（USE_LLM 开关）"
+  },
+  "retrieval": {
+    "runs": "82 查询 × 3 轮 = 246 次",
+    "total_ms": {
+      "p50": 0.26,
+      "p90": 0.55,
+      "p99": 4.4,
+      "mean": 0.54
+    },
+    "stages_mean_ms": {
+      "BrandFilter": 0.0,
+      "CategoryFilter": 0.0,
+      "ExclusionFilter": 0.0,
+      "KeywordFilter": 0.003,
+      "ProductTypeFilter": 0.005,
+      "RangeFilter": 0.002,
+      "StockFilter": 0.0,
+      "dedupe_and_rerank": 0.38,
+      "store_prefilter_recall": 0.139
+    }
+  },
+  "http_chat": {
+    "runs": "6 消息 × 5 轮",
+    "errors": 0,
+    "ttfb_ms": {
+      "p50": 5.29,
+      "p90": 6.0,
+      "p99": 12.19
+    },
+    "total_ms": {
+      "p50": 3650.4,
+      "p90": 6362.44,
+      "p99": 7414.77
+    }
+  },
+  "deepseek": {
+    "runs": 10,
+    "latency_ms": {
+      "p50": 3569.2,
+      "p90": 4020.95,
+      "min": 3013.7,
+      "max": 4151.0
+    },
+    "completion_tokens_mean": 235.1
+  }
+}

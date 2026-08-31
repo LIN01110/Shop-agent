@@ -1,0 +1,112 @@
+{
+  "generated_at": "2026-06-07T12:03:58.584013+00:00",
+  "data": "D:\\RAG\\data\\products_ref.json",
+  "runs": 1,
+  "warmup": 0,
+  "top_k": 5,
+  "store": "chroma",
+  "store_builds": [
+    {
+      "size": 1000,
+      "document_expand_ms": 6.202300079166889,
+      "store_build_ms": 12579.649300081655
+    }
+  ],
+  "results": [
+    {
+      "size": 1000,
+      "case": "sports_shoes",
+      "query": "推荐一款运动鞋",
+      "filters": {
+        "product_types": [
+          "clothes.sports_shoes"
+        ]
+      },
+      "cards_min": 5,
+      "cards_max": 5,
+      "p50_ms": 140.121900010854,
+      "p95_ms": 140.121900010854,
+      "avg_ms": 140.121900010854,
+      "min_ms": 140.121900010854,
+      "max_ms": 140.121900010854
+    },
+    {
+      "size": 1000,
+      "case": "compound_running_shoes",
+      "query": "推荐一款适合跑步的鞋",
+      "filters": {
+        "product_types": [
+          "clothes.sports_shoes"
+        ]
+      },
+      "cards_min": 5,
+      "cards_max": 5,
+      "p50_ms": 101.62660002242774,
+      "p95_ms": 101.62660002242774,
+      "avg_ms": 101.62660002242774,
+      "min_ms": 101.62660002242774,
+      "max_ms": 101.62660002242774
+    },
+    {
+      "size": 1000,
+      "case": "shoes_or_pants",
+      "query": "推荐运动鞋或运动裤",
+      "filters": {
+        "product_types": [
+          "clothes.sports_shoes",
+          "clothes.sports_pants"
+        ]
+      },
+      "cards_min": 5,
+      "cards_max": 5,
+      "p50_ms": 178.33799996878952,
+      "p95_ms": 178.33799996878952,
+      "avg_ms": 178.33799996878952,
+      "min_ms": 178.33799996878952,
+      "max_ms": 178.33799996878952
+    },
+    {
+      "size": 1000,
+      "case": "eye_cream_budget",
+      "query": "推荐一款保湿眼霜，预算250以内",
+      "filters": {
+        "max_price": 250,
+        "keywords": [
+          "保湿",
+          "眼霜"
+        ],
+        "product_types": [
+          "beauty.eye_cream"
+        ]
+      },
+      "cards_min": 5,
+      "cards_max": 5,
+      "p50_ms": 36.115100025199354,
+      "p95_ms": 36.115100025199354,
+      "avg_ms": 36.115100025199354,
+      "min_ms": 36.115100025199354,
+      "max_ms": 36.115100025199354
+    },
+    {
+      "size": 1000,
+      "case": "phone_photo_budget",
+      "query": "推荐一款拍照手机，预算4000以内",
+      "filters": {
+        "max_price": 4000,
+        "keywords": [
+          "拍照"
+        ],
+        "product_types": [
+          "electronics.phone"
+        ]
+      },
+      "cards_min": 5,
+      "cards_max": 5,
+      "p50_ms": 32.74819999933243,
+      "p95_ms": 32.74819999933243,
+      "avg_ms": 32.74819999933243,
+      "min_ms": 32.74819999933243,
+      "max_ms": 32.74819999933243
+    }
+  ]
+}

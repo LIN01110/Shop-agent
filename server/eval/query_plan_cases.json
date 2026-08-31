@@ -1,0 +1,212 @@
+[
+  {
+    "id": "single_sunscreen",
+    "query": "推荐一款防晒霜",
+    "expected": {
+      "intent": "recommend",
+      "route": "deterministic",
+      "product_types": ["beauty.sunscreen"]
+    }
+  },
+  {
+    "id": "single_sunscreen_budget",
+    "query": "推荐防晒霜，预算300以内",
+    "expected": {
+      "intent": "recommend",
+      "route": "deterministic",
+      "product_types": ["beauty.sunscreen"],
+      "max_price": "300"
+    }
+  },
+  {
+    "id": "single_sports_shoes",
+    "query": "推荐一款运动鞋",
+    "expected": {
+      "intent": "recommend",
+      "route": "deterministic",
+      "product_types": ["clothes.sports_shoes"]
+    }
+  },
+  {
+    "id": "sports_shoes_exclude_pants",
+    "query": "推荐运动鞋，不要运动裤",
+    "expected": {
+      "intent": "recommend",
+      "route": "planner",
+      "product_types": ["clothes.sports_shoes"],
+      "exclude_product_types": ["clothes.sports_pants"]
+    }
+  },
+  {
+    "id": "sports_shoes_price_floor_brand_negation",
+    "query": "推荐1000元以上的运动鞋，不要耐克",
+    "expected": {
+      "intent": "recommend",
+      "route": "planner",
+      "product_types": ["clothes.sports_shoes"],
+      "min_price": "1000",
+      "exclusions": ["耐克"]
+    }
+  },
+  {
+    "id": "student_budget_soft",
+    "query": "推荐一款运动鞋，学生党别太贵",
+    "expected": {
+      "intent": "recommend",
+      "route": "planner",
+      "product_types": ["clothes.sports_shoes"]
+    }
+  },
+  {
+    "id": "phone_camera_preference",
+    "query": "推荐一款手机，拍照优先",
+    "expected": {
+      "intent": "recommend",
+      "route": "planner",
+      "product_types": ["electronics.phone"],
+      "keywords": ["拍照"]
+    }
+  },
+  {
+    "id": "headphones_single",
+    "query": "推荐一款蓝牙耳机",
+    "expected": {
+      "intent": "recommend",
+      "route": "deterministic",
+      "product_types": ["electronics.headphones"]
+    }
+  },
+  {
+    "id": "coffee_single",
+    "query": "推荐一款挂耳咖啡",
+    "expected": {
+      "intent": "recommend",
+      "route": "deterministic",
+      "product_types": ["food.coffee"]
+    }
+  },
+  {
+    "id": "sanya_bundle",
+    "query": "去三亚玩，帮我搭配一套从防晒到穿搭的方案",
+    "expected": {
+      "intent": "bundle",
+      "route": "deterministic"
+    }
+  },
+  {
+    "id": "generic_summer_checklist",
+    "query": "帮我做一个夏天出行清单",
+    "expected": {
+      "intent": "bundle",
+      "route": "deterministic"
+    }
+  },
+  {
+    "id": "sports_training_bundle",
+    "query": "帮我配一套跑步训练清单",
+    "expected": {
+      "intent": "bundle",
+      "route": "deterministic"
+    }
+  },
+  {
+    "id": "compare_products",
+    "query": "这两个哪个更适合油皮？",
+    "session": {
+      "shown_products": [
+        {"id": "p1", "name": "清爽防晒乳", "brand": "A", "price": 100},
+        {"id": "p2", "name": "滋润防晒霜", "brand": "B", "price": 120}
+      ]
+    },
+    "expected": {
+      "intent": "compare",
+      "route": "planner"
+    }
+  },
+  {
+    "id": "cart_add_ordinal",
+    "query": "把第二个加到购物车",
+    "session": {
+      "shown_products": [
+        {"id": "p1", "name": "商品一", "brand": "A", "price": 100},
+        {"id": "p2", "name": "商品二", "brand": "B", "price": 120}
+      ]
+    },
+    "expected": {
+      "intent": "cart",
+      "route": "planner",
+      "reference_type": "ordinal",
+      "reference_index": 2
+    }
+  },
+  {
+    "id": "cart_quantity_brand",
+    "query": "我想买两双安踏",
+    "session": {
+      "shown_products": [
+        {"id": "p1", "name": "安踏 C202 跑鞋", "brand": "安踏", "price": 1299}
+      ]
+    },
+    "expected": {
+      "intent": "cart",
+      "route": "planner",
+      "reference_type": "brand",
+      "reference_text": "安踏",
+      "quantity": 2
+    }
+  },
+  {
+    "id": "context_cheaper",
+    "query": "这个换成便宜点的",
+    "session": {
+      "shown_products": [
+        {"id": "p1", "name": "高端跑鞋", "brand": "A", "price": 1299}
+      ]
+    },
+    "expected": {
+      "intent": "ask_product_detail",
+      "route": "planner",
+      "reference_type": "last"
+    }
+  },
+  {
+    "id": "negative_brand_alias",
+    "query": "不要 lining，换个牌子",
+    "session": {
+      "shown_products": [
+        {"id": "p1", "name": "李宁跑鞋", "brand": "李宁", "price": 899}
+      ]
+    },
+    "expected": {
+      "intent": "recommend",
+      "route": "planner",
+      "exclude_brands": ["李宁"]
+    }
+  },
+  {
+    "id": "soft_texture_skincare",
+    "query": "推荐一款面霜，不要太油但别拔干",
+    "expected": {
+      "intent": "recommend",
+      "route": "planner",
+      "product_types": ["beauty.face_cream"]
+    }
+  },
+  {
+    "id": "ambiguous_open_purchase",
+    "query": "帮我买一个好用的",
+    "expected": {
+      "intent": "browse",
+      "route": "planner"
+    }
+  },
+  {
+    "id": "school_dorm_long_tail",
+    "query": "开学住宿舍要买啥",
+    "status": "known_gap",
+    "expected": {
+      "intent": "bundle",
+      "route": "planner"
+    }
+  }
+]

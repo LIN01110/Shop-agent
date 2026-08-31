@@ -1,0 +1,91 @@
+[
+  {
+    "id": "recommend_text",
+    "description": "纯文本推荐：用户请求推荐商品",
+    "request": {
+      "message": "推荐一款洁面乳",
+      "session_id": "eval_recommend_text"
+    },
+    "expected_events": ["token", "product_card", "done"],
+    "forbidden_events": ["error", "guardrail"],
+    "expected_in_answer": ["洁面", "推荐"]
+  },
+  {
+    "id": "recommend_with_budget",
+    "description": "带预算推荐：用户指定价格上限",
+    "request": {
+      "message": "推荐200元以下的口红",
+      "session_id": "eval_budget"
+    },
+    "expected_events": ["token", "product_card", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": ["口红"]
+  },
+  {
+    "id": "compare_products",
+    "description": "商品比较：用户要求对比",
+    "request": {
+      "message": "比较一下这两个口红的区别",
+      "session_id": "eval_compare"
+    },
+    "expected_events": ["token", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": ["对比", "区别"]
+  },
+  {
+    "id": "add_to_cart",
+    "description": "加购意图：用户想把商品加入购物车",
+    "request": {
+      "message": "把第二个加到购物车",
+      "session_id": "eval_cart"
+    },
+    "expected_events": ["cart_update", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": []
+  },
+  {
+    "id": "clarification",
+    "description": "需要澄清：用户需求模糊",
+    "request": {
+      "message": "推荐一个好用的",
+      "session_id": "eval_clarify"
+    },
+    "expected_events": ["token", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": ["请问", "具体"]
+  },
+  {
+    "id": "out_of_catalog",
+    "description": "无结果：商品不在目录中",
+    "request": {
+      "message": "有没有火箭发动机",
+      "session_id": "eval_ooc"
+    },
+    "expected_events": ["token", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": ["抱歉", "没有"]
+  },
+  {
+    "id": "image_search",
+    "description": "图片搜索：用户上传图片",
+    "request": {
+      "message": "帮我找类似的",
+      "image_base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ...",
+      "session_id": "eval_image"
+    },
+    "expected_events": ["token", "product_card", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": ["推荐", "类似"]
+  },
+  {
+    "id": "guardrail_test",
+    "description": "幻觉测试：触发 grounding guard",
+    "request": {
+      "message": "这款手机的库存充足吗？",
+      "session_id": "eval_guard"
+    },
+    "expected_events": ["token", "done"],
+    "forbidden_events": ["error"],
+    "expected_in_answer": ["库存"]
+  }
+]

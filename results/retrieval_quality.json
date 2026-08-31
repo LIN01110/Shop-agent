@@ -1,0 +1,2618 @@
+{
+  "meta": {
+    "queries_file": "/root/shop-agent/rag-shopping-agent-main/data/evaluation/retrieval_queries.jsonl",
+    "num_queries": 82,
+    "top_k": 10,
+    "store": "LocalJsonVectorStore",
+    "ground_truth": "规则自动标注（类目/子类目/品牌/价格字段匹配）"
+  },
+  "configs": {
+    "raw_recall": {
+      "config": "raw_recall",
+      "overall": {
+        "count": 82,
+        "recall@5": 0.857,
+        "recall@10": 0.9358,
+        "ndcg@10": 0.9312,
+        "mrr": 0.9367
+      },
+      "by_query_type": {
+        "brand_sub": {
+          "count": 15,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9946,
+          "mrr": 1.0
+        },
+        "category": {
+          "count": 4,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        "natural": {
+          "count": 25,
+          "recall@5": 0.7843,
+          "recall@10": 0.9255,
+          "ndcg@10": 0.884,
+          "mrr": 0.909
+        },
+        "price": {
+          "count": 10,
+          "recall@5": 0.85,
+          "recall@10": 0.9,
+          "ndcg@10": 0.8081,
+          "mrr": 0.7833
+        },
+        "subcategory": {
+          "count": 28,
+          "recall@5": 0.9417,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9735,
+          "mrr": 0.9732
+        }
+      },
+      "per_query": [
+        {
+          "query_id": "q001",
+          "query": "平板电脑推荐",
+          "query_type": "subcategory",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q002",
+          "query": "智能手机推荐",
+          "query_type": "subcategory",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q003",
+          "query": "真无线耳机推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q004",
+          "query": "笔记本电脑推荐",
+          "query_type": "subcategory",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q005",
+          "query": "卫衣推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q006",
+          "query": "帽子推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q007",
+          "query": "徒步鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q008",
+          "query": "短袖T恤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q009",
+          "query": "篮球鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q010",
+          "query": "背包推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q011",
+          "query": "跑步鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q012",
+          "query": "运动长裤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q013",
+          "query": "速干T恤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.5013,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "q014",
+          "query": "化妆水推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q015",
+          "query": "眼霜推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q016",
+          "query": "精华推荐",
+          "query_type": "subcategory",
+          "relevant_count": 7,
+          "recall@5": 0.5714,
+          "recall@10": 1.0,
+          "ndcg@10": 0.8981,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q017",
+          "query": "蜜粉推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q018",
+          "query": "防晒推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9675,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q019",
+          "query": "面霜推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q020",
+          "query": "功能饮料推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q021",
+          "query": "咖啡推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9709,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q022",
+          "query": "坚果/零食推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q023",
+          "query": "方便食品推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q024",
+          "query": "牛奶推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q025",
+          "query": "碳酸饮料推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q026",
+          "query": "茶饮推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q027",
+          "query": "调味品推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q028",
+          "query": "酸奶推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q029",
+          "query": "Apple 苹果的笔记本电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q030",
+          "query": "小米的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q031",
+          "query": "OPPO的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q032",
+          "query": "珀莱雅的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q033",
+          "query": "优衣库的短袖T恤",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q034",
+          "query": "Apple 苹果的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q035",
+          "query": "华为的平板电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q036",
+          "query": "联想的笔记本电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q037",
+          "query": "Apple 苹果的平板电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q038",
+          "query": "三顿半的咖啡",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q039",
+          "query": "雀巢的咖啡",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q040",
+          "query": "元气森林的碳酸饮料",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q041",
+          "query": "康师傅的方便食品",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q042",
+          "query": "雅诗兰黛的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q043",
+          "query": "兰蔻的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q044",
+          "query": "我想买一副降噪蓝牙耳机",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q045",
+          "query": "有没有适合通勤的无线耳机",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q046",
+          "query": "想换一部拍照好的手机",
+          "query_type": "natural",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 0.9,
+          "ndcg@10": 0.9364,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q047",
+          "query": "推荐一款续航强的手机",
+          "query_type": "natural",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q048",
+          "query": "大学生买什么笔记本电脑比较合适",
+          "query_type": "natural",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q049",
+          "query": "有没有适合办公的轻薄本",
+          "query_type": "natural",
+          "relevant_count": 6,
+          "recall@5": 0.5,
+          "recall@10": 0.6667,
+          "ndcg@10": 0.7017,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q050",
+          "query": "买台平板用来看剧和上网课",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9951,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q051",
+          "query": "推荐一双适合日常跑步的鞋",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9709,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q052",
+          "query": "晨跑穿什么鞋比较好",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.0,
+          "recall@10": 0.25,
+          "ndcg@10": 0.1301,
+          "mrr": 0.1429
+        },
+        {
+          "query_id": "q053",
+          "query": "打外场篮球穿什么鞋耐磨",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q054",
+          "query": "周末去爬山需要一双防滑的鞋",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 0.4825,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "q055",
+          "query": "秋天想买件宽松的卫衣",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q056",
+          "query": "熬夜多，想买抗老精华",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9911,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q057",
+          "query": "有什么保湿精华推荐",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.4286,
+          "recall@10": 0.5714,
+          "ndcg@10": 0.6685,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q058",
+          "query": "冬天皮肤干燥，推荐一款保湿面霜",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.906,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q059",
+          "query": "敏感肌能用的面霜有哪些",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q060",
+          "query": "熬夜黑眼圈重，推荐一款眼霜",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q061",
+          "query": "夏天户外用的防晒霜推荐",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 0.6667,
+          "recall@10": 1.0,
+          "ndcg@10": 0.5932,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "q062",
+          "query": "补水面膜哪款好用",
+          "query_type": "natural",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q063",
+          "query": "提神的速溶咖啡推荐",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q064",
+          "query": "上班族喝什么咖啡方便",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.5,
+          "recall@10": 0.75,
+          "ndcg@10": 0.7246,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q065",
+          "query": "加班熬夜喝什么功能饮料提神",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q066",
+          "query": "早餐喝的高钙牛奶推荐",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q067",
+          "query": "办公室囤点什么坚果零食好",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q068",
+          "query": "宿舍囤货，有什么方便食品推荐",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q069",
+          "query": "面霜，预算100元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.6934,
+          "mrr": 0.5
+        },
+        {
+          "query_id": "q070",
+          "query": "190元以内的蜜粉有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 0.5,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "q071",
+          "query": "跑步鞋，预算1210元以内",
+          "query_type": "price",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9675,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q072",
+          "query": "60元以内的坚果/零食有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q073",
+          "query": "酸奶，预算70元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q074",
+          "query": "1320元以内的徒步鞋有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q075",
+          "query": "帽子，预算220元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q076",
+          "query": "380元以内的运动长裤有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q077",
+          "query": "眼霜，预算230元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q078",
+          "query": "1210元以内的背包有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "q079",
+          "query": "数码电子有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q080",
+          "query": "服饰运动有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q081",
+          "query": "美妆护肤有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q082",
+          "query": "食品饮料有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        }
+      ]
+    },
+    "pipeline_rerank": {
+      "config": "pipeline_rerank",
+      "overall": {
+        "count": 82,
+        "recall@5": 0.857,
+        "recall@10": 0.9358,
+        "ndcg@10": 0.9312,
+        "mrr": 0.9367
+      },
+      "by_query_type": {
+        "brand_sub": {
+          "count": 15,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9946,
+          "mrr": 1.0
+        },
+        "category": {
+          "count": 4,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        "natural": {
+          "count": 25,
+          "recall@5": 0.7843,
+          "recall@10": 0.9255,
+          "ndcg@10": 0.884,
+          "mrr": 0.909
+        },
+        "price": {
+          "count": 10,
+          "recall@5": 0.85,
+          "recall@10": 0.9,
+          "ndcg@10": 0.8081,
+          "mrr": 0.7833
+        },
+        "subcategory": {
+          "count": 28,
+          "recall@5": 0.9417,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9735,
+          "mrr": 0.9732
+        }
+      },
+      "per_query": [
+        {
+          "query_id": "q001",
+          "query": "平板电脑推荐",
+          "query_type": "subcategory",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q002",
+          "query": "智能手机推荐",
+          "query_type": "subcategory",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q003",
+          "query": "真无线耳机推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q004",
+          "query": "笔记本电脑推荐",
+          "query_type": "subcategory",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q005",
+          "query": "卫衣推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q006",
+          "query": "帽子推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q007",
+          "query": "徒步鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q008",
+          "query": "短袖T恤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q009",
+          "query": "篮球鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q010",
+          "query": "背包推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q011",
+          "query": "跑步鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q012",
+          "query": "运动长裤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q013",
+          "query": "速干T恤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.5013,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "q014",
+          "query": "化妆水推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q015",
+          "query": "眼霜推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q016",
+          "query": "精华推荐",
+          "query_type": "subcategory",
+          "relevant_count": 7,
+          "recall@5": 0.5714,
+          "recall@10": 1.0,
+          "ndcg@10": 0.8981,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q017",
+          "query": "蜜粉推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q018",
+          "query": "防晒推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9675,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q019",
+          "query": "面霜推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q020",
+          "query": "功能饮料推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q021",
+          "query": "咖啡推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9709,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q022",
+          "query": "坚果/零食推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q023",
+          "query": "方便食品推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q024",
+          "query": "牛奶推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q025",
+          "query": "碳酸饮料推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q026",
+          "query": "茶饮推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q027",
+          "query": "调味品推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q028",
+          "query": "酸奶推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q029",
+          "query": "Apple 苹果的笔记本电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q030",
+          "query": "小米的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q031",
+          "query": "OPPO的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q032",
+          "query": "珀莱雅的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q033",
+          "query": "优衣库的短袖T恤",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q034",
+          "query": "Apple 苹果的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q035",
+          "query": "华为的平板电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q036",
+          "query": "联想的笔记本电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q037",
+          "query": "Apple 苹果的平板电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q038",
+          "query": "三顿半的咖啡",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q039",
+          "query": "雀巢的咖啡",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q040",
+          "query": "元气森林的碳酸饮料",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q041",
+          "query": "康师傅的方便食品",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q042",
+          "query": "雅诗兰黛的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q043",
+          "query": "兰蔻的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q044",
+          "query": "我想买一副降噪蓝牙耳机",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q045",
+          "query": "有没有适合通勤的无线耳机",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q046",
+          "query": "想换一部拍照好的手机",
+          "query_type": "natural",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 0.9,
+          "ndcg@10": 0.9364,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q047",
+          "query": "推荐一款续航强的手机",
+          "query_type": "natural",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q048",
+          "query": "大学生买什么笔记本电脑比较合适",
+          "query_type": "natural",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q049",
+          "query": "有没有适合办公的轻薄本",
+          "query_type": "natural",
+          "relevant_count": 6,
+          "recall@5": 0.5,
+          "recall@10": 0.6667,
+          "ndcg@10": 0.7017,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q050",
+          "query": "买台平板用来看剧和上网课",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9951,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q051",
+          "query": "推荐一双适合日常跑步的鞋",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9709,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q052",
+          "query": "晨跑穿什么鞋比较好",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.0,
+          "recall@10": 0.25,
+          "ndcg@10": 0.1301,
+          "mrr": 0.1429
+        },
+        {
+          "query_id": "q053",
+          "query": "打外场篮球穿什么鞋耐磨",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q054",
+          "query": "周末去爬山需要一双防滑的鞋",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 0.4825,
+          "mrr": 0.25
+        },
+        {
+          "query_id": "q055",
+          "query": "秋天想买件宽松的卫衣",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q056",
+          "query": "熬夜多，想买抗老精华",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9911,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q057",
+          "query": "有什么保湿精华推荐",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.4286,
+          "recall@10": 0.5714,
+          "ndcg@10": 0.6685,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q058",
+          "query": "冬天皮肤干燥，推荐一款保湿面霜",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.906,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q059",
+          "query": "敏感肌能用的面霜有哪些",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q060",
+          "query": "熬夜黑眼圈重，推荐一款眼霜",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q061",
+          "query": "夏天户外用的防晒霜推荐",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 0.6667,
+          "recall@10": 1.0,
+          "ndcg@10": 0.5932,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "q062",
+          "query": "补水面膜哪款好用",
+          "query_type": "natural",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q063",
+          "query": "提神的速溶咖啡推荐",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q064",
+          "query": "上班族喝什么咖啡方便",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.5,
+          "recall@10": 0.75,
+          "ndcg@10": 0.7246,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q065",
+          "query": "加班熬夜喝什么功能饮料提神",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q066",
+          "query": "早餐喝的高钙牛奶推荐",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q067",
+          "query": "办公室囤点什么坚果零食好",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q068",
+          "query": "宿舍囤货，有什么方便食品推荐",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q069",
+          "query": "面霜，预算100元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.6934,
+          "mrr": 0.5
+        },
+        {
+          "query_id": "q070",
+          "query": "190元以内的蜜粉有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 0.5,
+          "mrr": 0.3333
+        },
+        {
+          "query_id": "q071",
+          "query": "跑步鞋，预算1210元以内",
+          "query_type": "price",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9675,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q072",
+          "query": "60元以内的坚果/零食有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q073",
+          "query": "酸奶，预算70元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q074",
+          "query": "1320元以内的徒步鞋有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q075",
+          "query": "帽子，预算220元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q076",
+          "query": "380元以内的运动长裤有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q077",
+          "query": "眼霜，预算230元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q078",
+          "query": "1210元以内的背包有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "q079",
+          "query": "数码电子有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q080",
+          "query": "服饰运动有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q081",
+          "query": "美妆护肤有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q082",
+          "query": "食品饮料有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        }
+      ]
+    },
+    "pipeline_nlu": {
+      "config": "pipeline_nlu",
+      "overall": {
+        "count": 82,
+        "recall@5": 0.8926,
+        "recall@10": 0.953,
+        "ndcg@10": 0.9746,
+        "mrr": 0.9817
+      },
+      "by_query_type": {
+        "brand_sub": {
+          "count": 15,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9946,
+          "mrr": 1.0
+        },
+        "category": {
+          "count": 4,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        "natural": {
+          "count": 25,
+          "recall@5": 0.841,
+          "recall@10": 0.942,
+          "ndcg@10": 0.9405,
+          "mrr": 0.96
+        },
+        "price": {
+          "count": 10,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        "subcategory": {
+          "count": 28,
+          "recall@5": 0.9417,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9815,
+          "mrr": 0.9821
+        }
+      },
+      "per_query": [
+        {
+          "query_id": "q001",
+          "query": "平板电脑推荐",
+          "query_type": "subcategory",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q002",
+          "query": "智能手机推荐",
+          "query_type": "subcategory",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q003",
+          "query": "真无线耳机推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q004",
+          "query": "笔记本电脑推荐",
+          "query_type": "subcategory",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q005",
+          "query": "卫衣推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q006",
+          "query": "帽子推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q007",
+          "query": "徒步鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q008",
+          "query": "短袖T恤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q009",
+          "query": "篮球鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q010",
+          "query": "背包推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q011",
+          "query": "跑步鞋推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q012",
+          "query": "运动长裤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q013",
+          "query": "速干T恤推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.6934,
+          "mrr": 0.5
+        },
+        {
+          "query_id": "q014",
+          "query": "化妆水推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q015",
+          "query": "眼霜推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q016",
+          "query": "精华推荐",
+          "query_type": "subcategory",
+          "relevant_count": 7,
+          "recall@5": 0.5714,
+          "recall@10": 1.0,
+          "ndcg@10": 0.8981,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q017",
+          "query": "蜜粉推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q018",
+          "query": "防晒推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q019",
+          "query": "面霜推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q020",
+          "query": "功能饮料推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q021",
+          "query": "咖啡推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9709,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q022",
+          "query": "坚果/零食推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q023",
+          "query": "方便食品推荐",
+          "query_type": "subcategory",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q024",
+          "query": "牛奶推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q025",
+          "query": "碳酸饮料推荐",
+          "query_type": "subcategory",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q026",
+          "query": "茶饮推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q027",
+          "query": "调味品推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q028",
+          "query": "酸奶推荐",
+          "query_type": "subcategory",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q029",
+          "query": "Apple 苹果的笔记本电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q030",
+          "query": "小米的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q031",
+          "query": "OPPO的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q032",
+          "query": "珀莱雅的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q033",
+          "query": "优衣库的短袖T恤",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q034",
+          "query": "Apple 苹果的智能手机",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q035",
+          "query": "华为的平板电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q036",
+          "query": "联想的笔记本电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q037",
+          "query": "Apple 苹果的平板电脑",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9197,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q038",
+          "query": "三顿半的咖啡",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q039",
+          "query": "雀巢的咖啡",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q040",
+          "query": "元气森林的碳酸饮料",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q041",
+          "query": "康师傅的方便食品",
+          "query_type": "brand_sub",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q042",
+          "query": "雅诗兰黛的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q043",
+          "query": "兰蔻的精华",
+          "query_type": "brand_sub",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q044",
+          "query": "我想买一副降噪蓝牙耳机",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q045",
+          "query": "有没有适合通勤的无线耳机",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q046",
+          "query": "想换一部拍照好的手机",
+          "query_type": "natural",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 0.8,
+          "ndcg@10": 0.8701,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q047",
+          "query": "推荐一款续航强的手机",
+          "query_type": "natural",
+          "relevant_count": 10,
+          "recall@5": 0.5,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q048",
+          "query": "大学生买什么笔记本电脑比较合适",
+          "query_type": "natural",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q049",
+          "query": "有没有适合办公的轻薄本",
+          "query_type": "natural",
+          "relevant_count": 6,
+          "recall@5": 0.8333,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q050",
+          "query": "买台平板用来看剧和上网课",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q051",
+          "query": "推荐一双适合日常跑步的鞋",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q052",
+          "query": "晨跑穿什么鞋比较好",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 0.75,
+          "ndcg@10": 0.8319,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q053",
+          "query": "打外场篮球穿什么鞋耐磨",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q054",
+          "query": "周末去爬山需要一双防滑的鞋",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        {
+          "query_id": "q055",
+          "query": "秋天想买件宽松的卫衣",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q056",
+          "query": "熬夜多，想买抗老精华",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.7143,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9911,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q057",
+          "query": "有什么保湿精华推荐",
+          "query_type": "natural",
+          "relevant_count": 7,
+          "recall@5": 0.4286,
+          "recall@10": 1.0,
+          "ndcg@10": 0.9447,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q058",
+          "query": "冬天皮肤干燥，推荐一款保湿面霜",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q059",
+          "query": "敏感肌能用的面霜有哪些",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q060",
+          "query": "熬夜黑眼圈重，推荐一款眼霜",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q061",
+          "query": "夏天户外用的防晒霜推荐",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q062",
+          "query": "补水面膜哪款好用",
+          "query_type": "natural",
+          "relevant_count": 1,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q063",
+          "query": "提神的速溶咖啡推荐",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q064",
+          "query": "上班族喝什么咖啡方便",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 0.75,
+          "recall@10": 1.0,
+          "ndcg@10": 0.8756,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q065",
+          "query": "加班熬夜喝什么功能饮料提神",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q066",
+          "query": "早餐喝的高钙牛奶推荐",
+          "query_type": "natural",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q067",
+          "query": "办公室囤点什么坚果零食好",
+          "query_type": "natural",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q068",
+          "query": "宿舍囤货，有什么方便食品推荐",
+          "query_type": "natural",
+          "relevant_count": 4,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q069",
+          "query": "面霜，预算100元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q070",
+          "query": "190元以内的蜜粉有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q071",
+          "query": "跑步鞋，预算1210元以内",
+          "query_type": "price",
+          "relevant_count": 3,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q072",
+          "query": "60元以内的坚果/零食有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q073",
+          "query": "酸奶，预算70元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q074",
+          "query": "1320元以内的徒步鞋有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q075",
+          "query": "帽子，预算220元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q076",
+          "query": "380元以内的运动长裤有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q077",
+          "query": "眼霜，预算230元以内",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q078",
+          "query": "1210元以内的背包有什么推荐",
+          "query_type": "price",
+          "relevant_count": 2,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q079",
+          "query": "数码电子有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q080",
+          "query": "服饰运动有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q081",
+          "query": "美妆护肤有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        },
+        {
+          "query_id": "q082",
+          "query": "食品饮料有什么值得买的",
+          "query_type": "category",
+          "relevant_count": 25,
+          "recall@5": 0.2,
+          "recall@10": 0.4,
+          "ndcg@10": 1.0,
+          "mrr": 1.0
+        }
+      ]
+    }
+  }
+}

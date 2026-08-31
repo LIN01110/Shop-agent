@@ -1,0 +1,106 @@
+[
+  {
+    "id": "cleanser_cleanser_lotion",
+    "query": "推荐一款洁面乳",
+    "expected": {
+      "product_types": ["beauty.cleanser"]
+    }
+  },
+  {
+    "id": "cleanser_face_wash",
+    "query": "推荐一款洗面奶",
+    "expected": {
+      "product_types": ["beauty.cleanser"]
+    }
+  },
+  {
+    "id": "cleanser_foam",
+    "query": "我想看所有洁面泡沫",
+    "expected": {
+      "product_types": ["beauty.cleanser"]
+    }
+  },
+  {
+    "id": "cleanser_typo",
+    "query": "我想看西面泡沫",
+    "expected": {
+      "product_types": ["beauty.cleanser"]
+    }
+  },
+  {
+    "id": "sports_shoe_generic_pair",
+    "query": "推荐一双鞋子",
+    "expected": {
+      "product_types": ["clothes.sports_shoes"]
+    }
+  },
+  {
+    "id": "sports_shoe_running",
+    "query": "推荐跑鞋",
+    "expected": {
+      "product_types": ["clothes.sports_shoes"]
+    }
+  },
+  {
+    "id": "sports_pants",
+    "query": "推荐一条运动裤",
+    "expected": {
+      "product_types": ["clothes.sports_pants"]
+    }
+  },
+  {
+    "id": "skincare_generic",
+    "query": "推荐一款护肤品",
+    "expected": {
+      "product_types": [],
+      "categories": ["beauty.skincare"]
+    }
+  },
+  {
+    "id": "digital_laptop_profile",
+    "query": "推荐一台笔记本电脑",
+    "expected": {
+      "product_types": ["electronics.laptop"],
+      "categories": ["electronics.digital"]
+    }
+  },
+  {
+    "id": "digital_tablet",
+    "query": "推荐一台平板电脑",
+    "expected": {
+      "product_types": ["electronics.tablet"],
+      "categories": ["electronics.digital"]
+    }
+  },
+  {
+    "id": "food_yogurt",
+    "query": "推荐一款酸奶",
+    "expected": {
+      "product_types": ["food.yogurt"],
+      "categories": ["food.beverage"]
+    }
+  },
+  {
+    "id": "clothes_backpack",
+    "query": "推荐一个旅行背包",
+    "expected": {
+      "product_types": ["clothes.backpack"]
+    }
+  },
+  {
+    "id": "out_of_catalog_perfume",
+    "query": "推荐一款香水",
+    "expected": {
+      "product_types": [],
+      "categories": []
+    }
+  },
+  {
+    "id": "out_of_catalog_engine",
+    "query": "有没有火箭发动机",
+    "expected": {
+      "product_types": [],
+      "categories": []
+    }
+  }
+]

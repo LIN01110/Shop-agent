@@ -1,0 +1,5 @@
+<!-- Purpose: Android主题资源：定义Material主题样式。 -->
+
+<resources>
+    <style name="Theme.RagShoppingAgent" parent="android:style/Theme.Material.Light.NoActionBar" />
+</resources>

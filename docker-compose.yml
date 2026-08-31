@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - USE_CHROMA=true
+      - USE_LLM=true
+      - ARK_API_KEY=${ARK_API_KEY}
+      # Phase 3 开关（按需开启）
+      # - ENABLE_INPUT_GUARD=true
+      # - USE_INDEXED_GROUNDING=true
+      # - RETRIEVAL_CANDIDATE_MULTIPLIER=5
+      # - RETRIEVAL_MIN_CANDIDATE_POOL=20
+    volumes:
+      - ./server/runtime:/app/server/runtime
+      - ./data:/app/data
+    depends_on:
+      - redis
+      # 如需 Milvus，取消下面注释
+      # - milvus-standalone
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # 可选：Milvus 向量数据库
+  # milvus-standalone:
+  #   image: milvusdb/milvus:v2.4.0
+  #   ports:
+  #     - "19530:19530"
+  #   volumes:
+  #     - milvus_data:/var/lib/milvus
+  #   restart: unless-stopped
+
+volumes:
+  redis_data:
+  # milvus_data:
