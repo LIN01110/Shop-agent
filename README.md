@@ -15,6 +15,17 @@
 | 成本 | LLM 调用 **-33.3%** / 总 token **-54.4%** | 规则路由将事实型查询分流至确定性 handler，24 问双臂对比 |
 | 回归保障 | **310 项 pytest 用例全绿** | 含检索/守卫/购物车/MCP 工具端到端 |
 
+### ESCI 库规模压力测试（2026-09-09）
+
+同一管线、同一 seed，把评测规模扩大 10 倍（脚本 `scripts/prepare_esci_small.py` + `evaluate_esci_retrieval.py`，ESCI-S us 公开数据）：
+
+| 评测集 | 商品池 | Recall@10 | MRR | NDCG@10 |
+|---|---|---|---|---|
+| esci_small | 2,583 | 55.3% | 65.2% | 55.5% |
+| esci_large | **24,063（×9.3）** | 34.6% | 46.5% | 35.2% |
+
+商品池扩大约 10 倍后 Recall@10 下降 20.7pp——量化暴露了本地 hashing embedding 方案对库规模的敏感性，这正是迁移 Milvus + 引入 Cross-Encoder 重排的实证动机（扩容复现：`--max-queries 3000`）。
+
 ## 架构
 
 ```text

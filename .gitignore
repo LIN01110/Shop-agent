@@ -6,6 +6,7 @@
 
 # 数据与产物（不上传）
 data/
+data_external/
 annotated/
 runs/
 *.pt

@@ -17,7 +17,7 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-ROOT = Path("/root/shop-agent/rag-shopping-agent-main")
+ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data_external" / "esci" / "tasksource" / "test_shard0.parquet"
 OUT_DIR = ROOT / "data_external" / "esci" / "tasksource_raw"
 
