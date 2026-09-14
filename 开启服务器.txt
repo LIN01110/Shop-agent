@@ -1,6 +1,0 @@
-cd "C:\Users\58380\Desktop\Shop_Agent\rag-shopping-agent-main"
-Remove-Item -Recurse -Force .venv
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip setuptools wheel
-pip install -r server\requirements.txt
