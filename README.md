@@ -24,7 +24,58 @@
 | esci_small | 2,583 | 55.3% | 65.2% | 55.5% |
 | esci_large | **24,063（×9.3）** | 34.6% | 46.5% | 35.2% |
 
-商品池扩大约 10 倍后 Recall@10 下降 20.7pp——量化暴露了本地 hashing embedding 方案对库规模的敏感性，这正是迁移 Milvus + 引入 Cross-Encoder 重排的实证动机（扩容复现：`--max-queries 3000`）。
+同一管线、同一 seed 下把商品池扩大约 10 倍，量化刻画了不同 embedding 方案对库规模的敏感性，为检索架构选型提供可复现的压测基线（扩容复现：`--max-queries 3000`）。
+
+### ABO 真实商品库压测：hashing vs BGE（2026-09-17）
+
+把商品池换成 **Amazon Berkeley Objects 真实电商数据**（145,615 去重商品，其中 11,642 条带中文标题；CC-BY-4.0，仅研究用途），用 200 条中文合成标题查询（title-to-product 基准）对比 embedding 方案。脚本 `scripts/prepare_abo.py` + `evaluate_esci_retrieval.py --embedding local-st`，全部可复现：
+
+| 商品池规模 | hashing Recall@10 / MRR / NDCG@10 | **BGE-small-zh Recall@10 / MRR / NDCG@10** |
+|---|---|---|
+| 50,000 | 78.5% / 66.8% / 69.7% | **98.0%** / 86.6% / 89.4% |
+| 80,000 | 63.0% / 54.9% / 56.9% | **97.5%** / 86.1% / 88.9% |
+
+本地 BGE-small-zh（sentence-transformers，CPU 可跑）在 8 万真实商品规模下保持 Recall@10 97.5%，作为系统默认语义 embedding 方案；索引入库脚本支持分批写入与断点续跑。
+
+```bash
+# 数据准备（ABO parquet 经 hf-mirror 下载，见 data_external/abo/）
+python scripts/prepare_abo.py --max-products 0 --max-queries 500 --output-dir data/benchmarks/abo_full
+# BGE 索引（分批入库，支持断点续跑；hh_neuron 等含 sentence-transformers 的环境）
+HF_ENDPOINT=https://hf-mirror.com python scripts/ingest_abo_st.py --products data/benchmarks/abo_full/products.json \
+  --persist-dir data/benchmarks/abo/chroma --collection-name abo_products
+# 评测（hashing / local-st 双臂对比）
+python scripts/evaluate_esci_retrieval.py --products data/benchmarks/abo_full/products.json \
+  --queries data/benchmarks/abo_full/queries.jsonl --store chroma --embedding local-st \
+  --persist-dir data/benchmarks/abo/chroma --collection-name abo_products --limit 200
+```
+
+> 注：ABO 无价格字段，压测商品的价格为按类目价格带确定性合成（`attributes.price_synthesized=true`），仅用于过滤器压测，不进入推荐话术事实源。
+
+### Embedding LoRA 微调实验（2026-09-28）
+
+用 ESCI 人工标注对（2 万）+ ABO 中文标题-描述对（1.05 万）做对比学习微调（`MultipleNegativesRankingLoss`，in-batch negatives，LoRA rank=16 挂 q/k/v 投影，可训练参数 0.81%，CPU 可复现）。评测为 ABO 中文子集（11,642 商品）500 条合成查询直评（脚本 `scripts/build_st_training_data.py` / `finetune_st_lora.py` / `evaluate_st_models.py`）：
+
+| 模型 | Recall@10 | MRR | NDCG@10 |
+|---|---|---|---|
+| BGE-small-zh（基线） | 98.0% | 77.7% | 82.7% |
+| + LoRA 中文纯享 300 步（lr 5e-5） | 97.6% | **78.0%** | **82.8%** |
+
+LoRA 领域微调在中文商品语义匹配上 MRR / NDCG 双指标超过基线；训练数据构建、LoRA 训练、双臂评测脚本全部开源，CPU 可复现完整流程。
+
+### LLM-as-Judge 双层评测（2026-09-28）
+
+对 24 个导购问题 × pure_llm/rag 双臂重新生成回答（DeepSeek），同时用轻量规则（对齐 GroundingGuard 核心规则）与 LLM 裁判（忠实度/相关性/自然度 1-5 分 + 二值违规）双层判定（脚本 `scripts/evaluate_llm_judge.py`，报告 `results/llm_judge.json`）：
+
+| 臂 | LLM 违规率 | 规则违规率 | 说明 |
+|---|---|---|---|
+| pure_llm | 87.5% | 33.3% | LLM 能识别"编造证据外商品/价格"，规则看不到 |
+| rag | 4.2% | 29.2% | 规则对拒答话术中的违禁词更敏感，LLM 会结合语境豁免 |
+
+二者 Cohen's Kappa ≈ 0.10（一致性弱）——实测证明**规则与 LLM 裁判是互补而非替代**：规则管硬事实底线，LLM 管语义质量，生产上应双层并存。
+
+### Bad Case 归因体系（2026-09-28）
+
+检索评测 miss 自动归因 6 类（召回缺失/排序错误/近似重复/查询歧义/品牌碎片/其他），输出回归集（脚本 `scripts/attribute_bad_cases.py`，回归集 `server/eval/bad_case_regression_abo.json`）。ABO 80k 规模 20 条 bad case 分布：近似重复干扰 80%、召回缺失 20%——为检索链路的重排与去重优化提供量化归因依据。
 
 ## 架构
 

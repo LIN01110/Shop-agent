@@ -6,7 +6,6 @@
 
 # 数据与产物（不上传）
 data/
-data_external/
 annotated/
 runs/
 *.pt
@@ -29,3 +28,5 @@ Thumbs.db
 # 运行时数据与二进制
 server/runtime/
 *.jar
+data_external/
+models/
