@@ -14,6 +14,55 @@ from server.rag.scoring import hashing_embedding
 INDEX_SCHEMA_VERSION = "v2_metadata_filters"
 
 
+class LocalSTEmbeddingFunction:
+    """Chroma embedding hook backed by a local sentence-transformers model (e.g. BGE).
+
+    离线可复现的真实稠密向量方案，替代 hashing 占位实现。
+    首次使用会从 HuggingFace 下载模型（国内网络可设 HF_ENDPOINT=https://hf-mirror.com）。
+    """
+
+    def __init__(self, model: str, batch_size: int = 64, device: str = "") -> None:
+        if batch_size <= 0:
+            raise ValueError("batch_size must be positive.")
+        self.model_name = model
+        self.batch_size = batch_size
+        self.device = device
+        self._model: Any = None
+
+    def _load(self) -> Any:
+        if self._model is None:
+            from sentence_transformers import SentenceTransformer
+
+            kwargs: dict[str, Any] = {}
+            if self.device:
+                kwargs["device"] = self.device
+            self._model = SentenceTransformer(self.model_name, **kwargs)
+        return self._model
+
+    def __call__(self, input: list[str]) -> list[list[float]]:
+        if not input:
+            return []
+        model = self._load()
+        texts = [text if text.strip() else "<empty>" for text in input]
+        vectors = model.encode(
+            texts,
+            batch_size=self.batch_size,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+        return [[float(v) for v in vector] for vector in vectors]
+
+    def name(self) -> str:
+        return f"local_st_{safe_identifier(self.model_name)}"
+
+    # Chroma >= 1.0 EmbeddingFunction 协议
+    def embed_documents(self, input: list[str]) -> list[list[float]]:
+        return self(input)
+
+    def embed_query(self, input: list[str]) -> list[list[float]]:
+        return self(input)
+
+
 class HashingEmbeddingFunction:
     """Small local embedding hook for Chroma when external embeddings are disabled."""
 
@@ -22,6 +71,13 @@ class HashingEmbeddingFunction:
 
     def __call__(self, input: list[str]) -> list[list[float]]:
         return [hashing_embedding(text, self.dimensions) for text in input]
+
+    # Chroma >= 1.0 EmbeddingFunction 协议
+    def embed_documents(self, input: list[str]) -> list[list[float]]:
+        return self(input)
+
+    def embed_query(self, input: list[str]) -> list[list[float]]:
+        return self(input)
 
     @staticmethod
     def name() -> str:

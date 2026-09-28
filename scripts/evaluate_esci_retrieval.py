@@ -38,8 +38,9 @@ def main() -> int:
     parser.add_argument("--products", default=str(DEFAULT_DATA_DIR / "products.json"))
     parser.add_argument("--queries", default=str(DEFAULT_DATA_DIR / "queries.jsonl"))
     parser.add_argument("--store", choices=["local", "chroma"], default="local")
-    parser.add_argument("--embedding", choices=["hashing", "ark", "ark-multimodal"], default="hashing")
+    parser.add_argument("--embedding", choices=["hashing", "ark", "ark-multimodal", "local-st"], default="hashing")
     parser.add_argument("--embedding-model", default="")
+    parser.add_argument("--st-model", default="BAAI/bge-small-zh-v1.5", help="--embedding local-st 使用的 sentence-transformers 模型")
     parser.add_argument("--persist-dir", default=str(DEFAULT_CHROMA_DIR))
     parser.add_argument("--collection-name", default=DEFAULT_COLLECTION_NAME)
     parser.add_argument("--embedding-batch-size", type=int, default=64)
@@ -126,16 +127,27 @@ def build_store(args: argparse.Namespace, products_path: Path) -> tuple[Any, dic
         model = settings.ark_embedding_model
 
     effective_batch_size = min(args.embedding_batch_size, 32) if args.embedding == "ark-multimodal" else args.embedding_batch_size
-    embedding_function, collection_name = build_chroma_embedding_function(
-        use_ark_embedding=use_ark_embedding,
-        embedding_api=embedding_api,
-        api_key=api_key,
-        base_url=base_url,
-        model=model,
-        timeout_seconds=settings.embedding_timeout_seconds,
-        batch_size=effective_batch_size,
-        collection_name=args.collection_name,
-    )
+    if args.embedding == "local-st":
+        from server.rag.embeddings import LocalSTEmbeddingFunction
+        from server.rag.identifiers import bounded_chroma_collection_name, safe_identifier
+
+        embedder = LocalSTEmbeddingFunction(args.st_model, batch_size=effective_batch_size)
+        embedding_function = embedder
+        collection_name = bounded_chroma_collection_name(
+            f"{args.collection_name}_{safe_identifier(embedder.name())}"
+        )
+        model = args.st_model
+    else:
+        embedding_function, collection_name = build_chroma_embedding_function(
+            use_ark_embedding=use_ark_embedding,
+            embedding_api=embedding_api,
+            api_key=api_key,
+            base_url=base_url,
+            model=model,
+            timeout_seconds=settings.embedding_timeout_seconds,
+            batch_size=effective_batch_size,
+            collection_name=args.collection_name,
+        )
     store = ChromaStore(
         Path(args.persist_dir),
         collection_name=collection_name,
@@ -158,7 +170,12 @@ def build_store(args: argparse.Namespace, products_path: Path) -> tuple[Any, dic
     ingested = False
     if count_before < len(documents):
         ingest_started = time.perf_counter()
-        store.add(documents)
+        # 分批写入：单批 5000，避免超大 upsert 卡死；中断后可按前缀续跑
+        chunk_size = 5000
+        for chunk_start in range(count_before, len(documents), chunk_size):
+            chunk_end = min(chunk_start + chunk_size, len(documents))
+            store.add(documents[chunk_start:chunk_end])
+            print(f"ingest progress: {chunk_end}/{len(documents)}", flush=True)
         ingested = True
         ingest_ms = round((time.perf_counter() - ingest_started) * 1000, 2)
     else:
@@ -168,7 +185,7 @@ def build_store(args: argparse.Namespace, products_path: Path) -> tuple[Any, dic
         "store": "chroma",
         "embedding": args.embedding,
         "embedding_api": embedding_api,
-        "embedding_model": model if args.embedding in {"ark", "ark-multimodal"} else "local_hashing_embedding",
+        "embedding_model": model if args.embedding in {"ark", "ark-multimodal", "local-st"} else "local_hashing_embedding",
         "embedding_batch_size": effective_batch_size if args.embedding in {"ark", "ark-multimodal"} else None,
         "persist_dir": str(Path(args.persist_dir)),
         "collection_name": collection_name,
