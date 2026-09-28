@@ -1,0 +1,430 @@
+{
+  "source_report": "data/benchmarks/abo_full/report_bge_80k.json",
+  "total_bad_cases": 20,
+  "distribution": {
+    "near_duplicate": 16,
+    "recall_missing": 4
+  },
+  "cases": [
+    {
+      "query_id": "abo_title_00010",
+      "query": "Amazon Brand – Devonshire 现代农舍分段",
+      "positive_product_ids": [
+        "abo_B0831Y1G6B"
+      ],
+      "retrieved_ids": [
+        "abo_B07FNSS15T",
+        "abo_B07FQZMZLX",
+        "abo_B07FLZ6N1Y",
+        "abo_B0721K4444",
+        "abo_B07FQW1GTG",
+        "abo_B07FQQ47XM",
+        "abo_B07FR8GK5R",
+        "abo_B07FQQDZCH",
+        "abo_B07MN865KY",
+        "abo_B0799BH3SL"
+      ],
+      "attribution": "recall_missing",
+      "reason": "正例未进入候选池（语义鸿沟或词表外表达）"
+    },
+    {
+      "query_id": "abo_title_00023",
+      "query": "Amazon Brand - 休闲几何羊毛跑步地毯,8 x 2",
+      "positive_product_ids": [
+        "abo_B07B4ZXM61"
+      ],
+      "retrieved_ids": [
+        "abo_B07WDYLHFW",
+        "abo_B07X8WB8KB",
+        "abo_B07YXC7GCM",
+        "abo_B07YX9C7JR",
+        "abo_B07X9ZR2GM",
+        "abo_B07XD3KTVG",
+        "abo_B07YX8FWX9",
+        "abo_B07QR4VC33",
+        "abo_B07QVL4JDS",
+        "abo_B07QJZLW6W"
+      ],
+      "attribution": "recall_missing",
+      "reason": "正例未进入候选池（语义鸿沟或词表外表达）"
+    },
+    {
+      "query_id": "abo_title_00142",
+      "query": "Amazon Brand – Andover 座椅系列, 皮革,",
+      "positive_product_ids": [
+        "abo_B07BWK58CN"
+      ],
+      "retrieved_ids": [
+        "abo_B07B4CZP32",
+        "abo_B07BWJCSQL",
+        "abo_B07B4D4B6F",
+        "abo_B07BW8VJ4N",
+        "abo_B07B4MTFSC",
+        "abo_B07CB5GN5S",
+        "abo_B07B4L6C7R",
+        "abo_B07BWK7FXW",
+        "abo_B07BW8PZ2S",
+        "abo_B07B4MFR3Z"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 9 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00148",
+      "query": "Marin 饰钉沙发, 灰石色",
+      "positive_product_ids": [
+        "abo_B075X4PT58"
+      ],
+      "retrieved_ids": [
+        "abo_B075X33RTB",
+        "abo_B075X4N51W",
+        "abo_B075X4PRVT",
+        "abo_B075X4T5RT",
+        "abo_B075X4T466",
+        "abo_B075X43FL8",
+        "abo_B075X4YD66",
+        "abo_B075X4N3QK",
+        "abo_B075X33SM2",
+        "abo_B075X4N3QL"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00175",
+      "query": "Amazon Brand – Los Altos 条纹德赫里农舍",
+      "positive_product_ids": [
+        "abo_B075Z8GZ4Z"
+      ],
+      "retrieved_ids": [
+        "abo_B079ZB4V97",
+        "abo_B07H8PTW71",
+        "abo_B07P5NN1G9",
+        "abo_B07W3MGMDQ",
+        "abo_B07FKK6348",
+        "abo_B07MCY65LM",
+        "abo_B07FLZ6N1Y",
+        "abo_B07YGBCKR7",
+        "abo_B07GFB5LYQ",
+        "abo_B07YGBKP3V"
+      ],
+      "attribution": "recall_missing",
+      "reason": "正例未进入候选池（语义鸿沟或词表外表达）"
+    },
+    {
+      "query_id": "abo_title_00039",
+      "query": "Amazon 品牌 - Uptown 中世纪天鹅绒簇绒定制沙发床",
+      "positive_product_ids": [
+        "abo_B075X4F4SF"
+      ],
+      "retrieved_ids": [
+        "abo_B075X4PRPW",
+        "abo_B075X4F4ST",
+        "abo_B075X4PRPY",
+        "abo_B075X4F56V",
+        "abo_B0792HC3YQ",
+        "abo_B075X4VM73",
+        "abo_B075X4F578",
+        "abo_B075X4F4SF",
+        "abo_B075X2X4GY",
+        "abo_B075X4PRPS"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00114",
+      "query": "窗帘杆带盖 finials",
+      "positive_product_ids": [
+        "abo_B075H9CWSB"
+      ],
+      "retrieved_ids": [
+        "abo_B075HC62GZ",
+        "abo_B075H5Q9WP",
+        "abo_B07588RR67",
+        "abo_B075HBTX4M",
+        "abo_B07588G261",
+        "abo_B075HB9PF7",
+        "abo_B075H9CWSB",
+        "abo_B075HBS4GX",
+        "abo_B0757ZGJQQ",
+        "abo_B075H26HJX"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00192",
+      "query": "透明亚克力球顶饰",
+      "positive_product_ids": [
+        "abo_B07M9CM11L"
+      ],
+      "retrieved_ids": [
+        "abo_B07MCYHXJ6",
+        "abo_B07MK5HLJX",
+        "abo_B07M5M6CZD",
+        "abo_B07M9CLTSJ",
+        "abo_B07MNB399J",
+        "abo_B07MK5HTLK",
+        "abo_B07M9CM11L",
+        "abo_B07MCYHXJS",
+        "abo_B07HG2DVSK",
+        "abo_B07MNB4XBX"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00019",
+      "query": "便携式空调 带遥控器",
+      "positive_product_ids": [
+        "abo_B07N6RT9SM"
+      ],
+      "retrieved_ids": [
+        "abo_B07N6Q9JB1",
+        "abo_B07YPV3KSY",
+        "abo_B07YPXCY4Q",
+        "abo_B07N6PKKWJ",
+        "abo_B07YPV7SN6",
+        "abo_B07N6RT9SM",
+        "abo_B07YPV3KTC",
+        "abo_B07N6RTLP7",
+        "abo_B07Y2B3ZXV",
+        "abo_B07Y2CND3Q"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00059",
+      "query": "手表表带 16毫米 不锈钢 - 智能手表表带 表带 16毫米 1",
+      "positive_product_ids": [
+        "abo_B08BFNDPVT"
+      ],
+      "retrieved_ids": [
+        "abo_B08BFN4GYZ",
+        "abo_B08BFBF19S",
+        "abo_B08BFW2RJ8",
+        "abo_B08BFCPQH6",
+        "abo_B08BFHL58C",
+        "abo_B08BFNDPVT",
+        "abo_B08BF8JNHZ",
+        "abo_B08BFRJVKY",
+        "abo_B08BFM2VYF",
+        "abo_B08BFCBYN9"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00093",
+      "query": "10 K 黄金吊坠项链，45.72厘米 + 30.48 cm 扩",
+      "positive_product_ids": [
+        "abo_B01M7S7U0B"
+      ],
+      "retrieved_ids": [
+        "abo_B01M4LPCCU",
+        "abo_B01MCW6I34",
+        "abo_B01N9CP783",
+        "abo_B01M4LP3MB",
+        "abo_B01M8KV2OH",
+        "abo_B01M7S7U0B",
+        "abo_B00N1PD71U",
+        "abo_B00N1PD56W",
+        "abo_B00N1PDHMY",
+        "abo_B00N1PDHSS"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00182",
+      "query": "Andover 现代座椅系列, 灰石色, 棕褐色",
+      "positive_product_ids": [
+        "abo_B07CB5GN4D"
+      ],
+      "retrieved_ids": [
+        "abo_B07B4GQBV2",
+        "abo_B07B4MHRXY",
+        "abo_B07B4MD5CG",
+        "abo_B07B4MSYPS",
+        "abo_B07B4MFDTZ",
+        "abo_B07CB5GN4D",
+        "abo_B07BWLJNQF",
+        "abo_B07BWMSLVZ",
+        "abo_B07CB57C8B",
+        "abo_B07BW8PYZ9"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 9 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00006",
+      "query": "platinum-plated 标准纯银施华洛世奇锆石公主3颗宝",
+      "positive_product_ids": [
+        "abo_B00FXW7QP2"
+      ],
+      "retrieved_ids": [
+        "abo_B00FXWASMA",
+        "abo_B00FXW7QFW",
+        "abo_B00FXW7ONQ",
+        "abo_B00FXW7QEI",
+        "abo_B00FXW7QP2",
+        "abo_B00FXWASGG",
+        "abo_B00FXW7OJA",
+        "abo_B00FXWASQ6",
+        "abo_B00FXW7OOU",
+        "abo_B012SZZMEI"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00047",
+      "query": "传统实心松木桌收藏品, 松木 木头, 黑色",
+      "positive_product_ids": [
+        "abo_B07M6PJ4NW"
+      ],
+      "retrieved_ids": [
+        "abo_B07MHMGJMH",
+        "abo_B07MBFDJWL",
+        "abo_B07MF1TRMS",
+        "abo_B07MHMGJMM",
+        "abo_B07M6PJ4NW",
+        "abo_B07MF1RP5H",
+        "abo_B07MHMJD43",
+        "abo_B07MF1SRKX",
+        "abo_B07M6PK31S",
+        "abo_B07MF1TTDP"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00164",
+      "query": "Amazon Brand – Andover 座椅系列, 皮革,",
+      "positive_product_ids": [
+        "abo_B07BW8VJ4N"
+      ],
+      "retrieved_ids": [
+        "abo_B07B4CZP32",
+        "abo_B07BWJCSQL",
+        "abo_B07B4D4B6F",
+        "abo_B07BW8VJ4N",
+        "abo_B07B4MTFSC",
+        "abo_B07CB5GN5S",
+        "abo_B07B4L6C7R",
+        "abo_B07BWK7FXW",
+        "abo_B07BW8PZ2S",
+        "abo_B07B4MFR3Z"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 9 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00187",
+      "query": "休闲格子地毯, 灰石色",
+      "positive_product_ids": [
+        "abo_B07B4ZL8FD"
+      ],
+      "retrieved_ids": [
+        "abo_B07B4ZXMCK",
+        "abo_B07B51T9VY",
+        "abo_B07B4SMKLP",
+        "abo_B07B4ZL8FD",
+        "abo_B07B4ZVDBY",
+        "abo_B07B4WQWQS",
+        "abo_B07B4ZVDBQ",
+        "abo_B07B4SMLML",
+        "abo_B07B4ZQDH7",
+        "abo_B07B4WR8SC"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00197",
+      "query": "现代黑白照片 OF EMPIRE 州建筑",
+      "positive_product_ids": [
+        "abo_B073P1GFXV"
+      ],
+      "retrieved_ids": [
+        "abo_B0757MT45V",
+        "abo_B073NZTB6X",
+        "abo_B073P1LM8D",
+        "abo_B073P1GFXV",
+        "abo_B073P117SF",
+        "abo_B073P1CJYS",
+        "abo_B073P1GGSL",
+        "abo_B073P6HGVL",
+        "abo_B073P6HGVH",
+        "abo_B073P63RQ5"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 7 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00001",
+      "query": "Bruckner Collection 手錶 男性 機械式（自動",
+      "positive_product_ids": [
+        "abo_B07B8J8LXH"
+      ],
+      "retrieved_ids": [
+        "abo_B07B8HYSLD",
+        "abo_B07B8RYY41",
+        "abo_B07B8J8LXH",
+        "abo_B00C4R9SPK",
+        "abo_B01GTG8ON8",
+        "abo_B00LCX76MY",
+        "abo_B074HDQ9KH",
+        "abo_B074HFS5DH",
+        "abo_B01LYTI0NV",
+        "abo_B00J0DUETA"
+      ],
+      "attribution": "recall_missing",
+      "reason": "正例未进入候选池（语义鸿沟或词表外表达）"
+    },
+    {
+      "query_id": "abo_title_00045",
+      "query": "Amazon Brand – Decatur 现代软垫餐椅,21",
+      "positive_product_ids": [
+        "abo_B08568YKW9"
+      ],
+      "retrieved_ids": [
+        "abo_B085686P5N",
+        "abo_B08568VZZR",
+        "abo_B08568YKW9",
+        "abo_B085693MV1",
+        "abo_B08568NJK4",
+        "abo_B08568VZZN",
+        "abo_B08568FHP9",
+        "abo_B0853L1KQ9",
+        "abo_B0853KPWHP",
+        "abo_B07QFRSG35"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    },
+    {
+      "query_id": "abo_title_00118",
+      "query": "Anne Marie 圆形木架储物弧形腿咖啡桌, 木头",
+      "positive_product_ids": [
+        "abo_B07F3XM8M3"
+      ],
+      "retrieved_ids": [
+        "abo_B07F49VHB8",
+        "abo_B07DB92J69",
+        "abo_B07F3XM8M3",
+        "abo_B07DBFG16Z",
+        "abo_B07F3XLTRH",
+        "abo_B07F3Y9BSC",
+        "abo_B07DB9638P",
+        "abo_B07DBDWZ7V",
+        "abo_B07DBGQ9DT",
+        "abo_B07DBHFDQW"
+      ],
+      "attribution": "near_duplicate",
+      "reason": "top-10 中 10 个与正例同品牌同品类（近似重复干扰）"
+    }
+  ]
+}
